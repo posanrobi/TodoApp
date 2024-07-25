@@ -1,6 +1,6 @@
 .todoItem {
-  background-color: rgb(122, 112, 112);
-  padding: 0.5rem 1rem;
+  background-color: rgb(147, 138, 138);
+  padding: 0.5rem 0.8rem;
   border-radius: 1rem;
   list-style: none;
   margin: 0.5rem 0;
@@ -10,13 +10,16 @@
   gap: 3rem;
 }
 
+.todoItemText {
+  width: 25rem;
+  height: 3rem;
+  overflow-y: scroll;
+  text-align: left;
+}
+
 .todoItemButtons {
   display: flex;
   gap: 0.5rem;
-}
-
-.todoItemText {
-  width: 25rem;
 }
 
 .inputField {
@@ -25,9 +28,10 @@
 
 .deleteTodo {
   background-color: rgba(242, 9, 9, 0.711);
-  color: #000;
+  color: black;
 }
 
 .completedTodo {
-  background-color: rgb(188, 93, 93);
+  background-color: rgb(106, 188, 93);
+  color: black;
 }

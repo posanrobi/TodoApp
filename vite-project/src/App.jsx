@@ -53,13 +53,10 @@ function App() {
               : classes.todoItem;
 
             return (
-              <li
-                key={todo.id}
-                className={`${itemClass} ${classes.todoItemText}`}
-              >
-                <div>
-                  {`${formattedDate} - ${todo.text} ${
-                    todo.completed ? "Completed" : "Not completed"
+              <li key={todo.id} className={`${itemClass}`}>
+                <div className={classes.todoItemText}>
+                  {`${todo.completed ? "Completed!" : ""} ${formattedDate} - ${
+                    todo.text
                   }`}
                 </div>
                 <div className={classes.todoItemButtons}>
