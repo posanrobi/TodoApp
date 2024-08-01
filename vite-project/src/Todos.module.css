@@ -1,5 +1,5 @@
 .todoItem {
-  background-color: rgb(147, 138, 138);
+  background-color: rgba(72, 68, 68, 0.811);
   padding: 0.5rem 0.8rem;
   border-radius: 1rem;
   list-style: none;
@@ -11,11 +11,32 @@
 }
 
 .todoItemText {
-  width: 25rem;
+  width: 20rem;
   height: 3rem;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   text-align: left;
 }
+
+/* SCROLLBAR BEGIN */
+.todoItemText::-webkit-scrollbar {
+  width: 8px;
+}
+
+.todoItemText::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.todoItemText::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+}
+
+.todoItemText::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+/* SCROLLBAR END */
 
 .todoItemButtons {
   display: flex;

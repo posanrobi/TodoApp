@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, deleteTodo, toggleTodo } from "./store/store";
+import { addTodo, deleteTodo, toggleTodo } from "./store/store.js";
 import classes from "./Todos.module.css";
 
 function App() {
