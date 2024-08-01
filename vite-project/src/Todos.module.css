@@ -1,5 +1,9 @@
+.todoList {
+  padding: 0;
+}
+
 .todoItem {
-  background-color: rgba(72, 68, 68, 0.811);
+  background-color: rgb(133 133 133);
   padding: 0.5rem 0.8rem;
   border-radius: 1rem;
   list-style: none;
@@ -38,18 +42,32 @@
 }
 /* SCROLLBAR END */
 
+.inputTodoContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
 .todoItemButtons {
   display: flex;
   gap: 0.5rem;
 }
 
+.doneBtn:hover {
+  background-color: #000000aa;
+}
+
 .inputField {
   padding: 0.5rem 0.7rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  color: black;
 }
 
 .deleteTodo {
   background-color: rgba(242, 9, 9, 0.711);
-  color: black;
+  color: white;
 }
 
 .completedTodo {

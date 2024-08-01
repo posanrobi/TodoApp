@@ -31,15 +31,17 @@ function App() {
   return (
     <>
       <div>
-        <input
-          type="text"
-          value={text}
-          onChange={handleInputChange}
-          placeholder="Add todo"
-          className={classes.inputField}
-        />
-        <button onClick={handleAddTodo}>Add</button>
-        <ul>
+        <div className={classes.inputTodoContainer}>
+          <input
+            type="text"
+            value={text}
+            onChange={handleInputChange}
+            placeholder="Add todo"
+            className={classes.inputField}
+          />
+          <button onClick={handleAddTodo}>Add</button>
+        </div>
+        <ul className={classes.todoList}>
           {todos.map((todo) => {
             const date = new Date(todo.id);
             const formattedDate = date.toLocaleDateString("en-US", {
@@ -60,9 +62,10 @@ function App() {
                   }`}
                 </div>
                 <div className={classes.todoItemButtons}>
-                  <button onClick={() => handleToggleTodo(todo.id)}>{`${
-                    todo.completed ? "Cancel" : "Done"
-                  }`}</button>
+                  <button
+                    className={classes.doneBtn}
+                    onClick={() => handleToggleTodo(todo.id)}
+                  >{`${todo.completed ? "Cancel" : "Done"}`}</button>
                   <button
                     onClick={() => handleDeleteTodo(todo.id)}
                     className={classes.deleteTodo}
