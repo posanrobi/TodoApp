@@ -1,5 +1,15 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
 .todoList {
   padding: 0;
+
+  max-height: 69vh; /* Biztosítjuk, hogy a lista ne nyúljon túl az ablakon */
+  overflow-y: auto; /* Görgethetővé tesszük, ha túl magas lenne */
+  overflow-x: hidden;
 }
 
 .todoItem {
@@ -12,6 +22,7 @@
   height: 3rem;
   display: flex;
   gap: 3rem;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .todoItemText {
@@ -63,6 +74,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
   color: black;
+  width: 100%;
 }
 
 .deleteTodo {
@@ -73,4 +85,30 @@
 .completedTodo {
   background-color: rgb(106, 188, 93);
   color: black;
+}
+
+.completedTodoText {
+  font-weight: bold;
+  display: inline-block;
+  animation: fadeInAndScale 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAndScale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className={classes.todoContainer}>
         <div className={classes.inputTodoContainer}>
           <input
             type="text"
@@ -57,9 +57,12 @@ function App() {
             return (
               <li key={todo.id} className={`${itemClass}`}>
                 <div className={classes.todoItemText}>
-                  {`${todo.completed ? "Completed!" : ""} ${formattedDate} - ${
-                    todo.text
-                  }`}
+                  {todo.completed && (
+                    <span className={classes.completedTodoText}>
+                      Completed!
+                    </span>
+                  )}
+                  {` ${formattedDate} - ${todo.text}`}
                 </div>
                 <div className={classes.todoItemButtons}>
                   <button
