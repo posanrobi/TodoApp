@@ -1,10 +1,13 @@
-import "./App.css";
+import TodoFilter from "./TodoFilter";
 import Todos from "./Todos";
+
+import "./App.css";
 
 function App() {
   return (
     <>
       <Todos />
+      <TodoFilter />
     </>
   );
 }

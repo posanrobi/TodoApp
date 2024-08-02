@@ -9,6 +9,7 @@ import { IoMdTrash } from "react-icons/io";
 const Todos = () => {
   const [text, setText] = useState("");
   const todos = useSelector((state) => state.todos.todos);
+  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
@@ -30,6 +31,12 @@ const Todos = () => {
     setText(e.target.value);
   };
 
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "all") return true;
+    if (filter === "active") return !todo.completed;
+    if (filter === "completed") return todo.completed;
+  });
+
   return (
     <>
       <div className={classes.todoContainer}>
@@ -46,7 +53,7 @@ const Todos = () => {
           </button>
         </div>
         <ul className={classes.todoList}>
-          {todos.map((todo) => {
+          {filteredTodos.map((todo) => {
             const date = new Date(todo.id);
             const formattedDate = date.toLocaleDateString("en-US", {
               year: "numeric",
