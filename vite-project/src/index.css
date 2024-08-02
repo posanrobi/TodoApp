@@ -3,15 +3,18 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(39, 38, 38, 0.87);
   color: #fff;
-  background-color: #f1f1f1;
+
+  background-image: url("./images/desk.jpg");
+  background-size: cover;
+  background-position: center;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 body {

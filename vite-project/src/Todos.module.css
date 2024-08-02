@@ -1,17 +1,17 @@
 .todoContainer {
   display: flex;
   flex-direction: column;
-  margin: 3rem 0;
+  margin: 3rem 0 0 0;
 }
 
 .todoList {
   padding: 0;
   max-height: 70vh;
   min-height: 69.5vh;
-  background-color: rgb(199, 196, 196);
+  background-color: rgba(199, 196, 196, 0.505);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0 2rem;
+  padding: 0 1rem;
   border-radius: 0.5rem;
   width: 32rem;
 }
