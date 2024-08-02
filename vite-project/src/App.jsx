@@ -1,5 +1,5 @@
-import TodoFilter from "./TodoFilter";
-import Todos from "./Todos";
+import TodoFilter from "./components/TodoFilter";
+import Todos from "./components/Todos";
 
 import "./App.css";
 

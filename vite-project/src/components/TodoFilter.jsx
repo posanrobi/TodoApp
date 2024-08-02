@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Input from "./Input";
-import { filterTodo } from "./store/filter-slice";
+import { filterTodo } from "../store/filter-slice";
 
 import classes from "./TodoFilter.module.css";
 

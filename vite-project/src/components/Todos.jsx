@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, deleteTodo, toggleTodo } from "./store/todo-slice.js";
+import { addTodo, deleteTodo, toggleTodo } from "../store/todo-slice.js";
 
 import classes from "./Todos.module.css";
 import { MdDone } from "react-icons/md";
@@ -70,10 +70,13 @@ const Todos = () => {
                 <div className={classes.todoItemText}>
                   {todo.completed && (
                     <span className={classes.completedTodoText}>
-                      Completed!
+                      Completed!🎉
                     </span>
                   )}
-                  {` ${formattedDate} - ${todo.text}`}
+                  {todo.text}
+                  <p
+                    className={classes.createDate}
+                  >{`Created: ${formattedDate}`}</p>
                 </div>
                 <div className={classes.todoItemButtons}>
                   <button

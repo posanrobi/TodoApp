@@ -1,14 +1,13 @@
 .todoContainer {
   display: flex;
   flex-direction: column;
-  margin: 3rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .todoList {
-  padding: 0;
-  max-height: 70vh;
-  min-height: 69.5vh;
-  background-color: rgba(199, 196, 196, 0.505);
+  max-height: 73.5vh;
+  min-height: 73.5vh;
+  background-color: rgba(176, 170, 170, 0.505);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 1rem;
@@ -24,7 +23,7 @@
   list-style: none;
   margin: 0.5rem 0;
   width: 30rem;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   gap: 3rem;
   justify-content: space-between;
@@ -33,11 +32,21 @@
 
 .todoItemText {
   width: 20rem;
-  height: 3rem;
   overflow-y: auto;
   overflow-x: hidden;
   text-align: left;
   color: black;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.createDate {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
 /* SCROLLBAR BEGIN */
@@ -156,6 +165,8 @@
 .completedTodo {
   background-color: rgb(140, 215, 129);
   color: black;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .completedTodoText {
