@@ -6,22 +6,29 @@
 
 .todoList {
   padding: 0;
-
-  max-height: 69vh; /* Biztosítjuk, hogy a lista ne nyúljon túl az ablakon */
-  overflow-y: auto; /* Görgethetővé tesszük, ha túl magas lenne */
+  max-height: 70vh;
+  min-height: 69.5vh;
+  background-color: rgb(199, 196, 196);
+  overflow-y: auto;
   overflow-x: hidden;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  width: 32rem;
+  border: 2px solid black;
 }
 
 .todoItem {
-  background-color: rgb(133 133 133);
+  background-color: #efecec;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid #696969;
   padding: 0.5rem 0.8rem;
-  border-radius: 1rem;
   list-style: none;
   margin: 0.5rem 0;
   width: 30rem;
   height: 3rem;
   display: flex;
   gap: 3rem;
+  justify-content: space-between;
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -31,6 +38,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   text-align: left;
+  color: black;
 }
 
 /* SCROLLBAR BEGIN */
@@ -51,6 +59,24 @@
 .todoItemText::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
+
+.todoList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.todoList::-webkit-scrollbar-track {
+  background: #b8b2b2;
+  border-radius: 10px;
+}
+
+.todoList::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+}
+
+.todoList::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
 /* SCROLLBAR END */
 
 .inputTodoContainer {
@@ -65,8 +91,59 @@
   gap: 0.5rem;
 }
 
+.addTodoBtn {
+  border-radius: 0.5rem;
+  border: none;
+  color: #f1f1f1;
+  font-weight: bold;
+  padding: 0 1rem;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.addTodoBtn:hover {
+  background-color: #302f2f;
+}
+
+.doneBtn {
+  color: green;
+  background-color: transparent;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.deleteTodo {
+  color: red;
+  background-color: transparent;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.deleteTodo:hover {
+  color: rgba(255, 0, 0, 0.708);
+}
+
 .doneBtn:hover {
-  background-color: #000000aa;
+  color: rgba(0, 128, 0, 0.626);
+}
+
+.cancelBtn {
+  font-size: 1rem;
+  color: black;
+}
+
+.cancelBtn:hover {
+  color: rgb(53, 50, 50);
 }
 
 .inputField {
@@ -74,16 +151,11 @@
   background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
   color: black;
-  width: 100%;
-}
-
-.deleteTodo {
-  background-color: rgba(242, 9, 9, 0.711);
-  color: white;
+  width: 25rem;
 }
 
 .completedTodo {
-  background-color: rgb(106, 188, 93);
+  background-color: rgb(140, 215, 129);
   color: black;
 }
 
@@ -91,6 +163,12 @@
   font-weight: bold;
   display: inline-block;
   animation: fadeInAndScale 0.4s ease-in-out;
+}
+
+.noTodoText {
+  color: black;
+  font-style: italic;
+  margin-top: 10rem;
 }
 
 @keyframes fadeIn {
